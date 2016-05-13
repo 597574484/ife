@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type = "text/css">
+        html { font-size : 62.5%;}
+        body { font-size : 100%;}
+
+        .rect{
+            width : 10rem;
+            min-height : 40rem;
+            border : 2px dashed #d3d3d3;
+            display : inline-block;
+        }
+        .item{
+            width : 100%;
+            height : 40px;
+            background-color : red;
+            margin-bottom : 4px;
+        }
+        .item-dragging{
+            position : relative;
+            background-color : green;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container" ondrop = "dropFn(event)" ondragover = "dragOverFn(event)">
+        <div class = "leftRect rect" >
+            <div id = "1" class = "item" dragable = "true" ondragstart="dragFn(event)" ondragover = "dragOverFn(event)"></div>
+            <div id = "2" class = "item" dragable = "true" ondragstart="dragFn(event)" ondragover = "dragOverFn(event)"></div>
+            <div id = "3" class = "item" dragable = "true" ondragstart="dragFn(event)" ondragover = "dragOverFn(event)"></div>
+            <div id = "4" class = "item" dragable = "true" ondragstart="dragFn(event)" ondragover = "dragOverFn(event)"></div>
+        </div>
+        <div class = "rightRect rect"></div>
+    </div>
+
+
+<script>
+    /**
+     * 拖拽处理Demo
+     * 事件顺序 ： 0 - 设置被拖拽的元素的dragable属性为true PS: 元素属性直接量和“直接量”都可行。
+     *           1 - 为被拖拽的元素设置dragstart事件的处理函数，其中通过event.dataTransfer设置剪贴板。
+     *           2 - 为容器元素添加dragover事件的处理函数，并阻止其默认行为。
+     *           3 - 为容器元素添加drop事件的处理函数，从dataTransfer中读取刚存入的数据。
+     * 事件发生的顺序 : dragstart --> dragover --> drop
+     * @param event
+     */
+        function dragEndFn(event){
+        console.log(1);
+    }
+        function dropFn(event){
+            event.preventDefault();
+            var data = event.dataTransfer.getData('text');
+            event.target.appendChild(document.getElementById(data.toString()));
+        }
+        function dragOverFn(event){
+            event.preventDefault();
+        }
+        function dragFn(event){
+            event.dataTransfer.setData('text',event.target.id);
+        }
+</script>
+</body>
+</html>
