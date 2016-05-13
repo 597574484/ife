@@ -23,6 +23,6 @@ with 和 catch 会延长作用域链，如访问变量 的话会降低效率。
 以上来自 <a href = "http://www.cnblogs.com/lhb25/archive/2011/09/06/javascript-scope-chain.html">这里</a>
 <h2>注意</h2>
 <i>1.javascript的函数执行在它被定义的的作用域中，而不是它被执行的作用域里</i>  ----js权威指南
-<p>未用var定义的变量被当做全局变量的实质: a = 1;写操作,所以会沿着作用域链找变量a,最后到window上还没有,于是就默认在window上创建属性a为1，季伟</p>
+<p>未用var定义的变量被当做全局变量的实质: a = 1;写操作,所以会沿着作用域链找变量a,最后到window上还没有,于是就默认在window上创建属性a为1，即为全局变量</p>
 PS : 下面的链接特别好。
 更多来自<a href = "http://www.laruence.com/2009/05/28/863.html">这里</a>  
