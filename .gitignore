@@ -4,4 +4,11 @@ Thumbs.db
 .DS_Store
 *.swp
 /dist
+node_modules
+<<<<<<< HEAD
 /.idea
+=======
+.idea
+node_modules/*
+node_modules
+>>>>>>> spring
