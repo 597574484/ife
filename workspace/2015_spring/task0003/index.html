@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel = "stylesheet" href = "css/normalize.css" />
+    <link rel = "stylesheet" href = "css/main.css" />
 </head>
 <body>
     <header class = "top-header">
-        <a href = "#">GTD Tools</a>
+        <h1>GTD Tools</h1>
     </header>
-    <div class = "left-part">
-        <div >所有任务 <span data-count = 0></span></div>
-        <div >分类列表</div>
+    <div class = "left-part part">
+        <div>所有任务 <span data-count = 0></span></div>
+        <div>分类列表</div>
         <ul id = "task-list">
             <li id = "task-default">默认分类</li>
         </ul>
         <div>新建分类</div>
     </div>
-    <div class = "middle-part">
+    <div class = "middle-part part">
         <div class = "middle-ctr">
             <button>所有</button>
             <button>未完成</button>
@@ -25,7 +27,7 @@
         <div class = "subtasks"></div>
         <div>新建任务</div>
     </div>
-    <div class = "right-part">
+    <div class = "right-part part">
         <div class = "task-info">
             <header>
                 <span data-taskName = ''></span>
