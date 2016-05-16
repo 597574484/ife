@@ -1,6 +1,5 @@
 html{
     font-size : 62.5%;
-
 }
 
 body{
@@ -25,11 +24,10 @@ a:hover,a:active{
 
 }
 .top-header{
-    box-sizing : border-box;
-    -moz-box-sizing : border-box;
-    -webkit-box-sizing: border-box;
     background-color : rgb(221,221,221);
     border-bottom : .1rem solid rgb(204,204,204);
+    overflow : hidden;
+    min-width : 70rem;
 }
 .top-header h1{
     height : 6rem;
@@ -38,17 +36,38 @@ a:hover,a:active{
     position : relative;
     left : .5rem;
     color : rgb(153,153,153);
+    width : 100%;
+}
+/**
+ *
+ *
+ *
+ **/
+.container{
+    position : absolute;
+    top :  6rem;bottom : 0;left : 0;right : 0;
+    font-size : 0;
+    white-space : nowrap;
 }
 .part{
     display : inline-block;
-    vertical-align: middle;
-    min-width : 23rem;
-    height : 48.8rem;
-    backround-color  :red;
+    white-space: normal;
+    vertical-align: top;
+    width : 15rem;
+    height : 100%;
     background-color : #d3d3d3;
+    font-size : 1.6rem;
+    border-right:3px solid rgb(204,204,204);
+    box-sizing: border-box;
+    -webkit-box-sizing : border-box;
 }
+/**/
 .left-part div:first-of-type{
     height : 3rem;
     line-height : 3rem;
-
+}
+.right-part{
+    width : calc(100% - 30rem);
+    min-width : 40rem;
+    border-right : 0;
 }
