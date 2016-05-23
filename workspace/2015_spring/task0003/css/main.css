@@ -38,11 +38,6 @@ a:hover,a:active{
     color : rgb(153,153,153);
     width : 100%;
 }
-/**
- *
- *
- *
- **/
 .container{
     position : absolute;
     top :  6rem;bottom : 0;left : 0;right : 0;
@@ -50,24 +45,29 @@ a:hover,a:active{
     white-space : nowrap;
 }
 .part{
+    position : relative;
     display : inline-block;
     white-space: normal;
     vertical-align: top;
     width : 15rem;
     height : 100%;
-    background-color : #d3d3d3;
+    background-color : #f0f0f0;
     font-size : 1.6rem;
-    border-right:3px solid rgb(204,204,204);
+    border-right:1px solid rgb(204,204,204);
     box-sizing: border-box;
     -webkit-box-sizing : border-box;
 }
-/**/
+
+
 .left-part div:first-of-type{
     height : 3rem;
     line-height : 3rem;
 }
+
 .right-part{
     width : calc(100% - 30rem);
     min-width : 40rem;
     border-right : 0;
 }
+
+
