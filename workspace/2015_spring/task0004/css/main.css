@@ -1,0 +1,83 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size : 100%;
+    background-color : #d3d3d3;
+}
+body,h1,h2,h3,h4,h5{
+    margin : 0;
+}
+a{
+    text-decoration : none;
+    transition :text-shadow .2s ease-in-out;
+}
+a:link, a:visited{}
+a:hover, a:active{
+    text-shadow: 2px 2px 4px #999999;
+}
+.wrap{
+    background-color : #ffffff;
+    margin : auto;
+    width : 70%;
+}
+.top-header{
+    text-align : center;
+    background-color: red;
+}
+.container{
+    max-width : 100%;
+    overflow : hidden;
+}
+.container a{
+    display: block;
+    text-align :  center;
+    margin-top : 20px;
+}
+.bot-footer{
+    text-align : center;
+}
+
+.bot-footer{
+    position: fixed;
+    bottom : 0;left:0;right:0;
+    margin-left:auto;margin-right:auto;
+    background-color: red;
+}
+.bot-footer a{
+    display : inline-block;
+    width : 30%;
+    min-height : 30px;
+    line-height : 30px;
+
+}
+@media all and (max-width : 435px){
+    body{
+        font-size : 1.6rem;
+    }
+    .wrap{
+        width : 100%;
+    }
+}
+@media all and (min-width :436px ) and (max-width : 800px){
+    body{
+        font-size : 2.4rem;
+    }
+    .wrap{
+        width : 100%;
+    }
+}@media all and (min-width : 801px) and (max-width : 1170px){
+    body{
+        font-size : 2rem;
+    }
+    .bot-footer{
+        display: none;
+    }
+}@media all and (min-width : 1171px){
+    body{
+        font-size : 2.4rem;
+    }
+    .bot-footer{
+        display: none;
+    }
+}

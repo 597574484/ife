@@ -1,3 +1,3 @@
-(function(){
-    alert(1);
-})();
+require(function(require, exports, module){
+    require('../css/main');
+});
