@@ -1,0 +1,92 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style type = "text/css">
+        /*manifest = "manifest.appcache"*/
+        html{
+            font-size : 62.5%;
+        }
+        body{
+            font-size : 100%;
+            background-color : #00bfff;
+        }
+        #top-header{
+            font-size : 3rem;
+            text-align: center;
+        }
+        #top-header div{
+            display: inline-block;
+        }
+        .wrap{
+            text-align : center;
+            margin-top : 20px;
+        }
+        #left, #right, #middle{
+            display : inline-block;
+            width : 128px;
+            height : 128px;
+            margin-right : 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            vertical-align : top;
+        }
+
+        #left{
+            background-image : url(../../images/game_1_0.png);
+        }
+        #middle{
+            background-image : url(../../images/game_1_1.png);
+        }
+        #right{
+            background-image : url(../../images/game_1_2.png);
+        }
+    </style>
+</head>
+<body>
+    <header id = "top-header">
+        <div> 请出拳吧，少年！</div>
+        <div>你已经获胜了 <span id = "counts"></span>次</div>
+    </header>
+    <div class = "wrap">
+        <div id = "left"   data-count = "0"></div>
+        <div id = "middle" data-count = "1"></div>
+        <div id = "right"  data-count = "2"></div>
+    </div>
+    <div class = "ctr"><button id = "re">继续</button><button>重来</button></div>
+    <script>
+        "use strict";
+        window.onload = function(event){
+            var count = 0,
+                    doc = document,
+                    win = window;
+            var left   = doc.querySelector('#left');
+            var middle = doc.querySelector('#middle');
+            var right  = doc.querySelector('#right');
+            var counter = doc.querySelector('#counts');
+
+            var fn = function(event){
+                var target = event.target,
+                    rand = Math.floor(Math.random()*3),
+                    diff = parseInt(target.dataset['count']) - rand,
+                    str = diff == 0 ? "equal" : (diff > 0 && diff != 2 ? "you succeed" : "you fail");
+
+                left.style.backgroundImage = "url(../../images/game_1_"+target.dataset['count']+".png)";
+                middle.style.backgroundImage  = "";
+
+                middle.innerText = str;
+                right.style.backgroundImage = "url(../../images/game_1_"+rand+".png)";
+
+                target.parentNode.removeEventListener('click',fn);
+            }
+
+            var again = function(event){
+                var target = event.target;
+              // if()
+            }
+            doc.querySelector('.wrap').addEventListener('click',fn,false);
+        };
+    </script>
+</body>
+</html>
