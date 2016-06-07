@@ -12,34 +12,74 @@
     </header>
     <div class ="container">
         <div class = "left-part part">
-            <div>所有任务 <span data-count = 0></span></div>
+            <div>所有任务 <span data-counts = 0></span></div>
             <div>分类列表</div>
-            <ul id = "task-list">
-                <li id = "task-default">默认分类</li>
-            </ul>
-            <div class = "bottom-ctr" id = "newClass">新建分类</div>
+
+            <ul class = "classify-list">
+                <li class = "classify-item classify-default" id = "classify-default">
+                    <span class = "classify-name">默认分类</span>
+                    <ul class = "task-list">
+                        <li class = "task-item">task1</li>
+                        <li class = "task-item">task2</li>
+                        <li class = "task-item">task3</li>
+                    </ul>
+                </li>
+                <li class = "classify-item classify-default" id = "classify-default">
+                    <span class = "classify-name">默认分类</span>
+                    <ul class = "task-list">
+                        <li class = "task-item">task1</li>
+                        <li class = "task-item">task2</li>
+                        <li class = "task-item">task3</li>
+                    </ul>
+                </li>
+                <li class = "classify-item classify-default" id = "classify-default">
+                    <span class = "classify-name">默认分类</span>
+                    <ul class = "task-list">
+                        <li class = "task-item">task1</li>
+                        <li class = "task-item">task2</li>
+                        <li class = "task-item">task3</li>
+                    </ul>
+                </li>
+            </ul> 
+
+            <div class = "bottom-ctr" id = "new-class">新建分类</div>
         </div>
+
         <div class = "middle-part part">
             <div class = "middle-ctr">
-                <button>所有</button>
-                <button>未完成</button>
-                <button>已完成</button>
+                <button id = "btn_all">所有</button>
+                <button id = "btn_unf">未完成</button>
+                <button id = "btn_fin">已完成</button>
             </div>
-            <div class = "subtasks"></div>
-            <div class  = "bottom-ctr" id = "newTask">新建任务</div>
+            <div class = "subtasks">
+                <ul>
+                    <li>time_1</li>
+                    <li>hehe</li>
+                    <li>hehe</li>
+                    <li>hehe</li>
+                    <li>hehe</li>
+                </ul>
+                <ul>
+                    <li>time_2</li>
+                    <li>hehe</li>
+                    <li>hehe</li>
+                    <li>hehe</li>
+                    <li>hehe</li>
+                </ul>
+            </div>
+            <div class  = "bottom-ctr" id = "new-task">新建任务</div>
         </div>
         <div class = "right-part part">
         <div class = "task-info">
-            <header>
-                <span data-taskName = ''></span>
-                <span><a href ="javascript:"></a></span>
-                <span><a href ="javascript:"></a></span>
-            </header>
+            <div >
+                <span data-taskName = '' id = "task-name"></span>
+                <span class = "icon-task-btn" id = "task-edit" ></span>
+                <span class = "icon-task-btn" id = "task-submit"></span>
+            </div>
             <div>任务日期: <span id = "time"></span></div>
             <div class  = "task-content"></div>
         </div>
     </div>
     </div>
-
 </body>
 </html>
